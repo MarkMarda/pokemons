@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import StatsPokemonsInfo from './StatsPokemonsInfo';
 
 const PokemonsInfo = ({ pokemon }) => {
@@ -10,9 +11,13 @@ const PokemonsInfo = ({ pokemon }) => {
       .then(res => setPokemonsInfo(res.data))
       .catch(err => console.log(err))
   }, []);
-  console.log(pokemonsInfo)
+  
+  const navigate = useNavigate(); 
+
+  const handleClick = () => navigate(`/pokedex/${pokemonsInfo.name}`);
+  
   return (
-    <article className='card-pokemons_info'>
+    <article onClick={handleClick} className='card-pokemons_info'>
       <header className={`card-pokemons-info__header bg-${pokemonsInfo?.types[0].type.name}`}>
         <img className='card-pokemons-info__img' src={pokemonsInfo?.sprites.other["official-artwork"]["front_default"]} alt="Pokemon-Image" />
       </header>

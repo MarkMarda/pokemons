@@ -14,7 +14,7 @@ function Pokemon() {
 
         <Route element={<ProtectedRoutes />}>
           <Route path='/pokedex' element={<Pokedex />}/>
-          <Route path='/pokedex/:id' element={<ParticularPokemonInfo />}/>
+          <Route path='/pokedex/:name' element={<ParticularPokemonInfo />}/>
         </Route>
       </Routes>
     </div>

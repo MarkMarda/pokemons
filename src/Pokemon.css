@@ -8,17 +8,18 @@
   flex-wrap: wrap;
   align-items: center;
   text-align: center;
-  margin-left: 10pxgit;
+  margin-left: 10px;
 }
 
 /* ---PokemonsInfo--- */
 .card-pokemons_info {
   display: inline-block;
   max-width: 300px;
-  height: 100vh;
+  height: 600px;
   background-color: rgba(128, 128, 128, 0.171);
   margin: 10px 10px;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .card-pokemons-info__header {
@@ -30,12 +31,9 @@
   width: 60%;
   height: 60%;
 }
+
 .bg-grass {
   background: radial-gradient(circle, rgba(16,158,44,0.9192051820728291) 36%, rgba(39,171,130,0.9612219887955182) 100%);
-}
-
-.bg-fire{
-  background: radial-gradient(circle, rgba(219,20,10,0.9192051820728291) 36%, rgba(204,214,22,0.9612219887955182) 100%);
 }
 
 .bg-water {
@@ -57,13 +55,39 @@
 .bg-dragon {
   background: radial-gradient(circle, rgba(9,31,50,0.9192051820728291) 36%, rgba(35,207,202,0.9612219887955182) 100%);
 }
+
+.bg-electric {
+  background: radial-gradient(circle, rgba(208,241,7,0.9192051820728291) 36%, rgba(207,153,35,0.9612219887955182) 100%);
+}
+
+.bg-fire{
+  background: radial-gradient(circle, rgba(219,20,10,0.9192051820728291) 36%, rgba(204,214,22,0.9612219887955182) 100%);
+}
+
+
 .card-pokemons-info__ul {
   display: flex; 
   display: grid;
   grid-template-columns: 33% 33% 33%;
+  background-color: aqua;
 }
 /* ---StatsPokemonsInfo--- */
 .stats-pokemons-info__li {
   display: inline-block;
-  
+}
+
+/* ---ParticularPokemonInfo--- */
+.card-particular-pokemon-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  width: 100%;
+}
+
+.card-particular-pokemon-info__footer {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  gap: 30px;
 }
